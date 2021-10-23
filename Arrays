@@ -1,0 +1,33 @@
+public class arrays {
+
+	public static void main(String[] args) {
+		
+		int [] marks = new int [5] ;
+	
+		marks [0] = 69;
+		marks [1] = 45;
+		marks [2] = 23;
+		marks [3] = 45;
+		marks [4] = 64;
+		
+		//System.out.println(marks[3]);              //Navine method 
+	
+		
+		
+//		for (int i=0; i<marks.length; i++) {         // Better method to display arrays
+//			System.out.println(marks[i]);
+//		}
+//		
+		for (int i= marks.length - 1 /*  || i = 4  */; i>=0; i--) {         // Reverse displaying
+			System.out.println(marks[i]);
+		}
+		
+		
+		System.out.println("Displaying the array using for-each loop");
+																										
+			for (int element: marks) {									// easier way of displaying arrays
+				System.out.println(element);
+			}
+				
+	}
+}
