@@ -1,0 +1,62 @@
+/*
+
+ Dynamic method dispatch 
+ In this type of method we can call two classes
+ Supose there ar two classes phone and smartphone 
+ Phone contains objects like showng time and turning phone on
+ Smartphone contains objects like playing music and turning smarthphone on
+ So we call call call smartphone with refernce object of phone
+ phone obj = new smartphone
+ Here while calling the overdriven method that is of turninig on the smarthphone will turn on
+ But you can't play music as the reference called is of phone and phone doesn't have a object of playing music
+ Just remember a smartphone can be called as phone but it can't have the same objects as smartphone
+ Just like the feature of turning  
+
+*/
+
+class Phone {
+	public void on() {
+		System.out.println("Turing on phone");
+	}
+	public void showtime() {
+		System.out.println("The time is 10 a.m.");
+	}
+
+} 
+
+class Smartphone extends Phone {
+	@Override
+	public void on() {
+		System.out.println("Turing on Smartphone");
+	}
+	public void music() {
+		System.out.println("Playing music on smartphone");
+	}
+}
+
+
+public class dynamic_method_dispatch {
+
+	public static void main(String[] args) {
+		
+		//Phone p = new Phone();                              These two are allowed calling in java lang
+		//Smartphone s = new Smartphone(); 
+
+		//  Smartphone obj = new Phone();			// This is not allowed as the ref smartphone cannot call phone objects		       
+		 
+		Phone obj = new Smartphone();               // This is also allowed calling in Java  lang
+		// Here above refernce is of phone and object is of smartphone
+		// So the methods in phone will run
+		// Methods same in phone and smartphone will run that is only overdriven methods will run
+		// To run methods [not overdriven] of smartphone you will have to call the smartphone class
+		
+		
+		obj.on();         // During runtime the called method is smarthphone so smartphone will on
+		
+		// obj.music();      this music is object in smarthphone and the reference is of Phone 
+	
+		obj.showtime();
+		
+	}
+
+}
