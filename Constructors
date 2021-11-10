@@ -1,0 +1,57 @@
+
+class myemployee{
+	
+	private int id ;
+	private String name;
+	
+//	public myemployee() {
+//		name = "Termu";                        You can either assign the values in class 
+//		id = 10;
+//	}
+	
+	public myemployee(String n, int no) {
+		name = n;                                // Or you can assign them in main class
+		id = no;
+	}
+	 
+	
+  //	public void setid(int n) {
+  //		id = n;                                   Using constructors will reduce all this code
+  //	}
+	public int getid() {
+		return id;
+	}
+  //	public void setname(String a) {
+  //		name = a;
+  //	}
+	public String getname() {
+		return name;
+	} 
+}	
+
+
+
+public class constructors {
+
+	public static void main(String[] args) {
+		
+		myemployee termu = new myemployee("efwsfds", 122);
+		
+	/*	termu.setid(10);												This process can't be repeated for every id and name
+		System.out.println(termu.getid());								Constructors can be used at such place
+		termu.setname("Termu");
+		System.out.println(termu.getname());  */
+		
+		System.out.println(termu.getid());                           	// NO need to  set the value with constructors
+		System.out.println(termu.getname());
+	
+	
+	
+	}
+	
+			
+	
+	
+	
+
+}
