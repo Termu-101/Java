@@ -1,0 +1,29 @@
+
+// IN method overloading we can create tow or more methods of same class and different parameters 
+
+public class methodoverloading {
+
+	static void foo () {
+		System.out.println("Good morning");
+	}
+	static void foo (int a) {								// Same class different parameters
+		System.out.println("Good morning " + a);
+	}
+	static void foo (int a , int b) {						// Same class different parameters					
+		System.out.println("Good morning "+ a + " " + b);
+	}
+
+	
+	//	static int foo(int a, int b) {                              // this is not allowed you can only repeat classes with different parameter and same name
+//		System.out.println("Good morning "+ a + " " + b);           // you can't repeat them with same name and different data type
+//	}
+	
+	
+	public static void main(String[] args) {
+		foo();
+		foo(300);
+		foo(100, 500);
+		
+	}
+
+}
