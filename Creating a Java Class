@@ -1,0 +1,45 @@
+
+// Creating our own java class
+// Classes help us to make our code look like real world 
+	
+	class employee {                                   // There can't e two public classes
+		int id;
+		String name;
+		public void info() {
+			System.out.println("My id is "+ id);
+			System.out.println("My name is "+ name);
+		}
+		
+	}
+	public class javaclass {
+
+	public static void main(String[] args) {
+		
+		
+		//Instantiating a new object
+		employee termu = new employee();  		// We have to define the created class in the main class
+		
+		// Instantiating another object
+		employee Jon = new employee();
+		
+		
+		
+		// Setting Attributes or Properties
+		termu.id = 10;
+		termu.name = "Abhishek";
+		
+		Jon.id = 15;
+		Jon.name = "Jonathan";
+		
+		
+		// Printing Attributes or Properties
+		termu.info();
+		
+		System.out.println();
+		
+		Jon.info();
+		
+		
+	}
+
+}
