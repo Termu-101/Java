@@ -1,0 +1,43 @@
+
+// Methods are use to avoid repeating of same logic again and again
+
+public class methods {
+
+	  int method(int x , int y) {                         // if static is not used then we have to call out the method in main class
+		int z;
+		if (x>y) {													// x represents a and y represents b
+			z = (x+y)*5;
+		}
+		else {
+			z = x+y;
+		}
+		return z;
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		
+		int a= 7;
+		int b =10;
+		int c;
+		
+		//c = method(a,b);              // Here the method has been declare   
+		methods obj = new methods();            // now this is called as method calling
+		c = obj.method(a, b);
+		
+		int a1= 19;
+		int b1 =5;
+		int c1;
+		
+		//  c1  = method(a1,b1);
+		//  methods obj2 = new methods();            // now this is called as method calling
+		//  c1 = obj2.method(a1, b1);
+		
+		// you can use the same method called for other declarations
+		c1 = obj.method(a1, b1);
+		
+		System.out.println(c +  " " +c1);
+		}
+
+	}
