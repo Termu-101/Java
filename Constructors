@@ -1,0 +1,34 @@
+
+public class voidmethods {
+
+	
+	static void change1(int a ) { 								// Void deesn't return anything 
+		a = 1423;
+	}	
+	
+	
+	static void change2(int [] arr) {
+		arr[0] = 98;
+	}
+	
+	public static void main(String[] args) {
+	
+		int x = 34;
+		change1(x);
+		System.out.println(x);                      // here changing the value in change1 class doesn't affect the main class
+	
+	
+		
+		int [] marks = {76, 56, 57, 55, 99};			// Here the value changes on the contrary that it is changed in the change2 class
+		change2(marks);								 // this was because the object is assigned to a reference and reference is been copied in the change2 class
+		System.out.println(marks[0]);                   // and change has been made in the reference so it indirectly changes the array 
+	                                                   // while in case of integer whole int is copied 
+	
+	
+	
+	
+	}
+	
+	
+
+}
