@@ -1,0 +1,31 @@
+
+class circle {
+    
+	private float r;
+	
+	public void setr(float radius) {
+		r = radius;
+	}
+	public float getarea() {
+		return 3.14f*r*r;
+	}
+	public float getperi() {
+		return 2f*3.14f*r;
+	}
+}
+
+public class accessmodifiers {
+
+	public static void main(String[] args) {
+	
+		circle c = new circle();
+		
+		//c.r = 34.4f;                        // since private access modifier us used it should call a set name and get name method
+		
+		
+		c.setr(5.6f);
+		System.out.println("Area: " + c.getarea());
+		System.out.println("Permeter " + c.getperi() );
+	}
+
+}
