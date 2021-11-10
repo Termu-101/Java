@@ -1,0 +1,32 @@
+// If the child class has the same method as the parent class with same parameters it is method overriding
+
+class A {
+	
+	public void meth1() {
+		System.out.println("Method of class A");
+	} 
+}
+
+class B extends A {
+	
+	@Override                           // Writing @Override is not necessary it is only to indicate that we had overdriven a method from parent class
+	public void meth1() {                           
+		System.out.println("Method of class B");       // Noth both overdring methods have same parameters
+	}
+	public void meth2() {
+		System.out.println(" New Method of class B");
+	}
+	
+}	
+
+public class method_overriding {
+
+	public static void main(String[] args) {
+		
+		A a  = new A();
+		a.meth1();
+		B b = new B();
+		b.meth1();
+	}
+
+}
