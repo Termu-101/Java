@@ -1,0 +1,30 @@
+
+// Varags enables us to write multiple arguments for same  function
+// Suppose you want to add tow numbers you create a method and with help of main method you print it 
+// If you want to add one more number you again make one new method and again in main method you print new line
+// You are repeating the code here instead you can use varags 
+// it cretes your entered elements into arrays
+
+
+
+public class varags {
+
+	static int sum(int...arr) {
+		int result = 0;
+		for(int element:arr) {
+			result += element;
+		}
+		return result;
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		System.out.println("The sum is "+ sum(4, 5));
+		System.out.println("The sum is "+ sum(4, 5, 6));
+		System.out.println("The sum is "+ sum(4, 5, 36, 252));
+		System.out.println("The sum is "+ sum(4, 5,45,978, 234, 245, 85, 34253, 57));
+		
+	}
+
+}
